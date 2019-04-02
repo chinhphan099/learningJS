@@ -8,4 +8,5 @@
 
 var name = 'lucky',
   age = 1,
-  color = 'white';
+  color = 'white',
+  isDog = true;
