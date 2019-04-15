@@ -36,6 +36,9 @@ var readFiles = co.wrap(function*(files) {
 readFiles(urls)
   .then(function(datas) {
     console.log(datas);
+  })
+  .catch(function(err) {
+    console.log(err);
   });
 
 // Cách 2: Sử dụng array.map
@@ -50,6 +53,9 @@ var readFiles_1 = co.wrap(function*(files) {
 readFiles_1(urls)
   .then(function(datas) {
     console.log(datas);
+  })
+  .catch(function(err) {
+    console.log(err);
   });
 
 
