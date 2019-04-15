@@ -1,0 +1,27 @@
+{
+  "name": "promise",
+  "version": "1.0.0",
+  "description": "Promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinhphan099/learningjs.git"
+  },
+  "keywords": [
+    "learningjs",
+    "at",
+    "begin"
+  ],
+  "author": "Chinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chinhphan099/learningjs/issues"
+  },
+  "homepage": "https://github.com/chinhphan099/learningjs#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
