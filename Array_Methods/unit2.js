@@ -60,7 +60,7 @@ console.log(e.shift()); // undefined
 console.log('End ================== .shift()');
 /*
   4. unshift()
-    Thêm giá trị chỉ định vào đầu mảng.
+    Thêm giá trị chỉ định vào đầu mảng.
     Trả về length mới của mảng.
 */
 var f = [1, 2, 5];

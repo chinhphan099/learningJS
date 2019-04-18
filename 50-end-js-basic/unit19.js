@@ -17,9 +17,21 @@ Output: False
 */
 
 function rearrangeChar(str1, str2) {
-// Viết hàm tại đây!
+  // Viết hàm tại đây!
+  var arr1 = str1.split('');
+  var arr2 = str2.split('');
+  var ascArr1 = arr1.sort(function(a, b) {
+    return a - b;
+  });
+  var ascArr2 = arr2.sort(function(a, b) {
+    return a - b;
+  });
+  if(ascArr1.join('') === ascArr2.join('')) {
+    return true;
+  }
+  return false;
 }
-
+//rearrangeChar('afaw','afaw');
 describe('rearrangeChar', function() {
   it('check whether it is possible to rearrange characters', function() {
     expect(rearrangeChar('afaw','afaw')).to.equal(true);

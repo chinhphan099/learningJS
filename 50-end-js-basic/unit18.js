@@ -11,7 +11,29 @@ Input: [1,2,3,4,1,2,2,1]
 Output: [1,2]*/
 
 function findMostFrequent(arr) {
-// Viêt hàm tại đây!
+  var obj = arr.reduce(function(tmpObj, number) { // Get object container individual values and count
+    if (typeof tmpObj[number] === 'undefined') {
+      tmpObj[number] = 1;
+    } else {
+      tmpObj[number] += 1;
+    }
+
+    return tmpObj;
+  }, {});
+
+  var tmpArr = [];
+  var max = 0;
+  for(var o in obj) {
+    if(obj[o] > max) {
+      tmpArr = [];
+      max = obj[o];
+      tmpArr.push(Number(o));
+    }
+    else if(obj[o] === max) {
+      tmpArr.push(Number(o));
+    }
+  }
+  return tmpArr;
 }
 
 describe('findMostFrequent', function() {
@@ -30,6 +52,4 @@ describe('findMostFrequent', function() {
   it('The number which appears most', function() {
     expect(findMostFrequent([ 11, 18, 28, 9, 25, 25, 33, 1, 0, 13, 10, 7, 39, 37, 31 ])).to.eql([ 25 ]);
   });
-
-
 });

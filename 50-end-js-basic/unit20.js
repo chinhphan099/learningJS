@@ -14,8 +14,11 @@ Output: 8 (là hiệu của 9 và 1)
 
 */
 
-function findmaxDiff(arr){
-  // Viết hàm tại đây
+function findmaxDiff(arr) {
+  var ascArr = arr.sort(function(a, b) {
+    return a - b;
+  });
+  return arr[arr.length - 1] - arr[0];
 }
 
 describe('findmaxDiff', function() {
