@@ -1,3 +1,6 @@
+let chai = require('chai');
+var expect = chai.expect;
+
 // viết hàm Kiểm tra xem một chuỗi bắt đầu bằng "Java" hay không
 function startWith(str){
   var hasJava = str.split(' ').find(function(s) {
@@ -10,4 +13,8 @@ function startWith(str){
   return false;
 }
 
-console.log(startWith('Javas'));
+describe('startWith', function () {
+  it('return higest of number startWith("Java")', function () {
+    expect(startWith('Java')).to.eql(true);
+  });
+});

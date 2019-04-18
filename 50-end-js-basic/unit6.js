@@ -1,3 +1,6 @@
+let chai = require('chai');
+var expect = chai.expect;
+
 function findMaxDiff(arr) {
   /*
     - Viết hàm findMaxDiff nhận tham số là một mảng integer (mảng số nguyên)
@@ -13,4 +16,16 @@ function findMaxDiff(arr) {
   return maxSpace;
 }
 
-console.log(findMaxDiff([1, -10, 5, 18, -9, 5])); //27
+describe('findMaxDiff', () => {
+    it('Should return the maximal different between two adjacent elements of a given array of interger', () => {
+      expect(findMaxDiff([1, -10, 5, 18, -9, 5])).to.equal(27);
+    });
+
+    it('Should return 0 (array has one element)', () => {
+      expect(findMaxDiff([5])).to.equal(0);
+    });
+
+    it('Should return 0 (empty array)', () => {
+      expect(findMaxDiff([])).to.equal(0);
+    });
+});

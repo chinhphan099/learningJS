@@ -1,3 +1,6 @@
+let chai = require('chai');
+var expect = chai.expect;
+
 //Compare count of letter 'p' vs 't'
 //=============================
 //input : string
@@ -11,6 +14,19 @@ function equal_pt(str){
 
   return (str.match(/p/g) || []).length === (str.match(/t/g) || []).length
 }
-console.log(equal_pt('')); // empty string
-console.log(equal_pt('paatpsts')); // true
-console.log(equal_pt('paatpss')); // false
+
+describe('equal_pt', function () {
+    it('Check if not the string', function () {
+    expect(equal_pt('')).to.equal('empty string');
+  });
+  it('Check if a given string "paatpsts" ', function () {
+    expect(equal_pt('paatpsts')).to.equal(true);
+  });
+  it('Check if a given string "aass"', function () {
+    expect(equal_pt('aass')).to.equal(true);
+  });
+      it('Check if a given string "paatpss" ', function () {
+    expect(equal_pt('paatpss')).to.equal(false);
+  });
+
+});
