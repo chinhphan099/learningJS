@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-freetuts",
+  "version": "1.0.0",
+  "description": "Project Learn Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TheHalfHeart@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "mysql": "^2.15.0",
+    "node-persist": "^3.0.0"
+  }
+}
